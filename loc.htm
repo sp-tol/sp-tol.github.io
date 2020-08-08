@@ -1,0 +1,27 @@
+奇点安全小组
+<script>
+ //alert(document.location.href);
+getLocationConstant();
+function getLocationConstant()
+{
+  if(navigator.geolocation)
+  {
+   navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
+  } else {
+   alert("No GPS support");
+  }
+}
+
+
+function onGeoSuccess(event)
+{
+    //document.getElementById("location").value =  event.coords.latitude+", "+event.coords.longitude;
+    alert("I got your Location: "+event.coords.latitude+", "+event.coords.longitude);
+}
+
+
+function onGeoError(event)
+{
+  alert("Error code " + event.code + ". " + event.message);
+}
+</script>
