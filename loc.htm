@@ -8,7 +8,7 @@ function getLocationConstant()
   {
    navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
   } else {
-   alert("No GPS support");
+   document.write("No GPS support");
   }
 }
 
@@ -16,12 +16,12 @@ function getLocationConstant()
 function onGeoSuccess(event)
 {
     //document.getElementById("location").value =  event.coords.latitude+", "+event.coords.longitude;
-    alert("I got your Location: "+event.coords.latitude+", "+event.coords.longitude);
+    document.write("I got your Location: "+event.coords.latitude+", "+event.coords.longitude);
 }
 
 
 function onGeoError(event)
 {
-  alert("Error code " + event.code + ". " + event.message);
+  document.write("Error code " + event.code + ". " + event.message);
 }
 </script>
